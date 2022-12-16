@@ -1,0 +1,12 @@
+#import "./UserFragments.gql"
+
+mutation UpdateUserLocation ($id:uuid!, $city:String, $country:String){
+  user: update_user_by_pk(_set:{
+    city:$city,
+    country:$country
+  }, pk_columns:{
+    id:$id
+  }){
+    ...UserDetail
+  }
+}

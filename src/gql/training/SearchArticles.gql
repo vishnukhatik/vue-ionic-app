@@ -1,0 +1,15 @@
+query SearchArticles($query: String!) {
+  articles: training_article(where: {_or: [{title: {_ilike: $query}},{body: {_ilike: $query}}]}) {
+    id
+    title
+    summary
+    picture
+    attachment_type
+    created_at
+    updated_at
+    category {
+      id
+      name
+    }
+  }
+}

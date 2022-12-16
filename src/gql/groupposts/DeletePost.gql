@@ -1,0 +1,6 @@
+#import "./PostFragment.gql"
+mutation DeletePost($id:uuid!) {
+  delete_post_by_pk(id:$id){
+    id
+  }
+}

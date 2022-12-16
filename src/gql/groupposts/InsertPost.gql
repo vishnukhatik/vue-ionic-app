@@ -1,0 +1,11 @@
+#import "./PostFragment.gql"
+mutation InsertPost($user_id:uuid!, $group_id:uuid, $message:String!, $picture:String) {
+  post: insert_post_one(object:{
+    group_id:$group_id,
+    author_id:$user_id,
+    message:$message,
+    picture: $picture,
+  }){
+    ...PostSummary
+  }
+}

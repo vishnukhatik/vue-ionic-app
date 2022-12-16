@@ -1,0 +1,6 @@
+#import "./TestimonyFragment.gql"
+mutation DeleteTestimony($id:uuid!) {
+  delete_testimony_by_pk(id:$id){
+    id
+  }
+}

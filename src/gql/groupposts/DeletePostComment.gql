@@ -1,0 +1,10 @@
+#import "./PostFragment.gql"
+
+mutation DeletePostComment($id:uuid!, $user_id:uuid!){
+  delete_post_comment_by_pk(id:$id){
+    id
+    post {
+      ... PostExtended
+    }
+  }
+}

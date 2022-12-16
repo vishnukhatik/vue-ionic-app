@@ -1,0 +1,49 @@
+:root {
+  --app-primary: #BF0012;
+  --cs-primary-base: var(--app-primary);
+  --ion-color-primary: var(--app-primary);
+  --ion-font-family: var(--cs-font-family);
+  --swiper-pagination-color: var(--app-primary);
+  --swiper-theme-color: var(--app-primary);
+}
+.text-center
+{
+  text-align: center;
+}
+.grey-content
+{
+  --background: var(--cs-gray-01);
+}
+.timestamp
+{
+  font-size:12px;
+  color: var(--cs-default-dark);
+}
+.search-container
+{
+  padding: 10px;
+}
+.extra-padding
+{
+  padding: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.input {
+  margin-bottom: 12px;
+  display: block;
+}
+.ql-editor
+{
+  padding: 0px;
+}
+.header-icon
+{
+  font-size: 22px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.endless
+{
+  white-space: nowrap;
+}

@@ -1,0 +1,17 @@
+mutation InsertGroupEvent(
+  $group_id:uuid!,
+  $google_place_id: String!,
+  $participant_count:Int!,
+  $engaged_count:Int!,
+  $date:date!
+) {
+  insert_group_event_one(object: {
+    google_place_id: $google_place_id,
+    participant_count: $participant_count,
+    group_id: $group_id,
+    engaged_count: $engaged_count,
+    date: $date
+  }){
+    id
+  }
+}

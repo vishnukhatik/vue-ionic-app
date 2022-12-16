@@ -1,0 +1,41 @@
+// Icons
+// -------------------------
+
+.icons8-book-shelf:before,
+.icons8-home:before,
+.icons8-forward:before,
+.icons8-group:before,
+.icons8-shopping-bag-full:before,
+.icons8-chat-bubble:before,
+.icons8-news:before,
+.icons8-menu-vertical:before,
+.icons8-marker:before,
+.icons8-clock:before,
+.icons8-conference:before,
+.icons8-user:before,
+.icons8-info:before,
+.icons8-exit:before,
+.icons8-add:before,
+.icons8-delete:before,
+[data-icons8]:before {
+  @include icons8-font;
+}
+
+[data-icons8]:before { content: attr(data-icons8); }
+
+.icons8-book-shelf:before {content: $icons8-var-book-shelf;}
+.icons8-home:before {content: $icons8-var-home;}
+.icons8-forward:before {content: $icons8-var-forward;}
+.icons8-group:before {content: $icons8-var-group;}
+.icons8-shopping-bag-full:before {content: $icons8-var-shopping-bag-full;}
+.icons8-chat-bubble:before {content: $icons8-var-chat-bubble;}
+.icons8-news:before {content: $icons8-var-news;}
+.icons8-menu-vertical:before {content: $icons8-var-menu-vertical;}
+.icons8-marker:before {content: $icons8-var-marker;}
+.icons8-clock:before {content: $icons8-var-clock;}
+.icons8-conference:before {content: $icons8-var-conference;}
+.icons8-user:before {content: $icons8-var-user;}
+.icons8-info:before {content: $icons8-var-info;}
+.icons8-exit:before {content: $icons8-var-exit;}
+.icons8-add:before {content: $icons8-var-add;}
+.icons8-delete:before {content: $icons8-var-delete;}

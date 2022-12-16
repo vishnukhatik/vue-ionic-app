@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Logging in ...
+    <script>
+      const accessToken = new URLSearchParams(window.location.hash.replace('#','')).get('access_token');
+      localStorage.access_token = accessToken;
+      window.location.href = '/#/tabs/home';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+#import "./TestimonyFragment.gql"
+query GetTestimony($id: uuid!, $user_id:uuid!) {
+  post: testimony_by_pk(id:$id){
+    ...TestimonyExtended
+  }
+}

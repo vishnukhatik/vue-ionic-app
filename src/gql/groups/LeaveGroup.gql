@@ -1,0 +1,5 @@
+mutation LeaveGroup($user_id: uuid!, $group_id: uuid!) {
+  delete_group_member(where: {_and: {user_id: {_eq: $user_id}, group_id: {_eq: $group_id}}}){
+    affected_rows
+  }
+}

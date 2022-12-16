@@ -1,0 +1,13 @@
+fragment UserDetail on user {
+  id
+  name
+  email
+  picture
+  about
+  city
+  country
+  age_range
+  gender
+  phone
+  facebook
+}

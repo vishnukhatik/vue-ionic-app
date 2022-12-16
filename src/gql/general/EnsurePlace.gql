@@ -1,0 +1,27 @@
+mutation EnsurePlace(
+  $id: String!,
+  $city:String!,
+  $country:String!,
+  $county:String,
+  $latitude:numeric!
+  $longitude:numeric!,
+  $name:String!,
+  $neighborhood:String,
+  $postal_code:String,
+  $state:String
+) {
+  insert_google_place_one(object: {
+    city: $city,
+    country: $country,
+    county: $county,
+    id: $id,
+    latitude: $latitude,
+    longitude: $longitude,
+    name: $name,
+    neighborhood: $neighborhood,
+    postal_code: $postal_code,
+    state: $state
+  }, on_conflict: {constraint: google_place_pkey, update_columns: name}){
+    id
+  }
+}

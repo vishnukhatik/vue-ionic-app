@@ -1,0 +1,14 @@
+fragment ProductSummary on GXWooCommerceProduct {
+  id
+  name
+  price
+  short_description
+  categories{
+    id
+    name
+  }
+  images {
+    id
+    src
+  }
+}

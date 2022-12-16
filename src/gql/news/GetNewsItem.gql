@@ -1,0 +1,9 @@
+query GetNewsItem($id:uuid!){
+  article:news_item_by_pk(id:$id){
+    id
+    title
+    body
+    created_at
+    updated_at
+  }
+}

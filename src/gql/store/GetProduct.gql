@@ -1,0 +1,12 @@
+query GetProduct ($id:String!){
+  product: gx_wc_product(id:$id){
+    id
+    name
+    price
+    images {
+      id
+      src
+    }
+    description
+  }
+}

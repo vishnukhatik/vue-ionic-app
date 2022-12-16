@@ -1,0 +1,10 @@
+#import "./TestimonyFragment.gql"
+
+mutation DeleteTestimonyComment($id:uuid!, $user_id:uuid!){
+  delete_testimony_comment_by_pk(id:$id){
+    id
+    testimony {
+      ... TestimonyExtended
+    }
+  }
+}

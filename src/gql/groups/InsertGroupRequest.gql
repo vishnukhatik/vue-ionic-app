@@ -1,0 +1,19 @@
+mutation InsertGroupRequest(
+  $user_id:uuid!,
+  $user_name:String,
+  $user_email:String,
+  $user_phone:String,
+  $google_place_id:String!,
+  $description:String
+){
+  insert_group_request_one(object:{
+    user_id:$user_id,
+    user_name:$user_name,
+    user_email:$user_email,
+    user_phone:$user_phone,
+    google_place_id:$google_place_id,
+    description:$description
+  }){
+    id
+  }
+}

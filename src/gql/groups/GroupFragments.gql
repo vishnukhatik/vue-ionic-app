@@ -1,0 +1,48 @@
+fragment GroupSummary on group {
+  id
+  name
+  picture
+  meeting_day
+  meeting_time
+  google_place {
+    name
+    city
+    country
+    latitude
+    longitude
+  }
+  members_aggregate {
+    aggregate {
+      count
+    }
+  }
+}
+
+fragment GroupDetail on group {
+  id
+  name
+  google_place_id
+  google_place {
+    name
+    city
+    country
+    latitude
+    longitude
+  }
+  description
+  picture
+  meeting_time
+  meeting_day
+  hide_location
+  members {
+    id
+    is_leader
+    is_approved
+    user {
+      id
+      name
+      picture
+      email
+    }
+  }
+}

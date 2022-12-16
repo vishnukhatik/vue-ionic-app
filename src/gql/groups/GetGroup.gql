@@ -1,0 +1,7 @@
+#import "./GroupFragments.gql"
+
+query GetGroup($id: uuid!) {
+  group: group_by_pk(id: $id) {
+    ...GroupDetail
+  }
+}

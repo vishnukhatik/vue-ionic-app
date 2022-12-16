@@ -1,0 +1,7 @@
+#import "./ProductFragments.gql"
+
+query RecentProducts {
+  recentProducts: gx_wc_products{
+    ...ProductSummary
+  }
+}

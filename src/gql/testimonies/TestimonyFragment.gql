@@ -1,0 +1,44 @@
+fragment TestimonySummary on testimony {
+  __typename
+  id
+  author {
+    id
+    name
+    picture
+  }
+  created_at
+  message
+  picture
+  reactions_aggregate {
+    aggregate {
+      count
+    }
+  }
+  comments_aggregate {
+    aggregate {
+      count
+    }
+  }
+  reactions(where:{user_id:{_eq:$user_id}}){
+    id
+    user {
+      picture
+      name
+    }
+  }
+}
+
+fragment TestimonyExtended on testimony {
+  __typename
+  id
+  ... TestimonySummary
+  comments{
+    id
+    author{
+      name
+      picture
+    }
+    message
+    created_at
+  }
+}

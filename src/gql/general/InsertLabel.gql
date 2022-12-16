@@ -1,0 +1,8 @@
+mutation InsertLabel($id:String!,$value:String!){
+  insert_label_one(object:{
+    id:$id,
+    default_value:$value
+  }){
+    id
+  }
+}

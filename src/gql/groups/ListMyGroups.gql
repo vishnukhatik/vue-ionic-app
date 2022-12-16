@@ -1,0 +1,9 @@
+#import "./GroupFragments.gql"
+
+query ListMyGroups($user_id:uuid!){
+  memberships: group_member(where: {user_id: {_eq: $user_id}}){
+    group{
+      ...GroupSummary
+    }
+  }
+}

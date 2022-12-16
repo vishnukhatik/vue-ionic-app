@@ -1,0 +1,16 @@
+query FeaturedProducts {
+  featuredProducts: gx_wc_products(category:20){
+    id
+    name
+    price
+    short_description
+    categories{
+      id
+      name
+    }
+    images {
+      id
+      src
+    }
+  }
+}

@@ -1,0 +1,11 @@
+query ListNews ($language:String!) {
+  news: news_item(where: {language_id: {_eq: $language}}) {
+    id
+    title
+    summary
+    created_at
+    updated_at
+    picture
+    attachment_type
+  }
+}

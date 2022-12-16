@@ -1,0 +1,10 @@
+query ListLabels ($language:String!) {
+  label_translation_view(where:{
+    language_id:{
+      _eq:$language
+    }
+  }){
+    id
+    display_value
+  }
+}

@@ -1,0 +1,26 @@
+#import "./UserFragments.gql"
+
+mutation UpdateUser(
+  $id:uuid!,
+  $name:String!,
+  $picture:String!,
+  $about:String!,
+  $age_range:String!,
+  $gender:String!,
+  $email:String,
+  $phone:String,
+  $facebook:String,
+) {
+  user: update_user_by_pk(pk_columns: {id: $id}, _set: {
+    name: $name,
+    picture: $picture,
+    about: $about,
+    age_range: $age_range,
+    gender: $gender,
+    email: $email,
+    phone: $phone,
+    facebook: $facebook,
+  }){
+    ...UserDetail
+  }
+}

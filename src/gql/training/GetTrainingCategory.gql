@@ -1,0 +1,10 @@
+#import "./TrainingFragments.gql"
+
+query GetTrainingCategory($id: uuid!) {
+  category: training_category_by_pk(id:$id) {
+    ... TrainingCategorySummary
+    articles {
+      ... TrainingArticleSummary
+    }
+  }
+}

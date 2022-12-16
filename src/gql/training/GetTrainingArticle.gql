@@ -1,0 +1,8 @@
+#import "./TrainingFragments.gql"
+
+query GetTrainingArticle($id: uuid!) {
+  article: training_article_by_pk(id: $id) {
+    ...TrainingArticleSummary
+    body
+  }
+}

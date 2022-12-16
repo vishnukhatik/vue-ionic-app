@@ -1,0 +1,7 @@
+#import "./GroupFragments.gql"
+
+query ListGroups{
+  groups: group {
+    ...GroupSummary
+  }
+}

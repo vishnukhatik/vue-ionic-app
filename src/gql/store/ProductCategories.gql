@@ -1,0 +1,6 @@
+query ProductCategories {
+  categories: gx_wc_product_categories{
+    id
+    name
+  }
+}

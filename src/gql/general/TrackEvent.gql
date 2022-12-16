@@ -1,0 +1,12 @@
+mutation TrackEvent($action:String!,$user_id:uuid, $ip:String, $city:String, $country:String, $item_id:uuid){
+  insert_analytics_event_one(object:{
+    action: $action,
+    user_id: $user_id,
+    ip: $ip,
+    city: $city,
+    country: $country,
+    item_id: $item_id
+  }){
+    id
+  }
+}

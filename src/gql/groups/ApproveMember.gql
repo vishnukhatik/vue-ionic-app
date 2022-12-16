@@ -1,0 +1,9 @@
+#import "./GroupFragments.gql"
+
+mutation ApproveMember($id:uuid!) {
+  update_group_member_by_pk(pk_columns: {id: $id}, _set: {is_approved: true}){
+    group {
+      ...GroupDetail
+    }
+  }
+}

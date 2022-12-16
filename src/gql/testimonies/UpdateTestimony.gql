@@ -1,0 +1,13 @@
+#import "./TestimonyFragment.gql"
+
+mutation UpdateTestimony($id:uuid!, $message:String!, $user_id:uuid!, $picture:String){
+  post: update_testimony_by_pk(_set:{
+    message:$message,
+    picture: $picture,
+  },pk_columns:{
+    id:$id
+  }){
+    id
+    message
+  }
+}

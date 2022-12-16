@@ -1,0 +1,6 @@
+#import "./PostFragment.gql"
+query GetPost($id: uuid!, $user_id:uuid!) {
+  post:post_by_pk(id:$id){
+    ...PostExtended
+  }
+}

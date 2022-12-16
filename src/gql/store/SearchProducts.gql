@@ -1,0 +1,7 @@
+#import "./ProductFragments.gql"
+
+query SearchProducts ($query:String!) {
+  products: gx_wc_products(search_keyword:$query){
+    ... ProductSummary
+  }
+}

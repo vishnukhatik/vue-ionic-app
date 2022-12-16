@@ -1,0 +1,17 @@
+fragment TrainingCategorySummary on training_category {
+  id
+  name
+}
+
+fragment TrainingArticleSummary on training_article {
+  id
+  title
+  summary
+  picture
+  attachment_type
+  created_at
+  updated_at
+  category {
+    ... TrainingCategorySummary
+  }
+}

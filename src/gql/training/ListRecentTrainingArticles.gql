@@ -1,0 +1,6 @@
+#import "./TrainingFragments.gql"
+query ListRecentTrainingArticles {
+  articles: training_article(order_by: {created_at: desc}, limit: 10, where: {featured: {_eq: false}}) {
+    ...TrainingArticleSummary
+  }
+}

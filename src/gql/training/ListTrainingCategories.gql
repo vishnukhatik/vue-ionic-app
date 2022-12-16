@@ -1,0 +1,13 @@
+#import "./TrainingFragments.gql"
+
+query ListTrainingCategories {
+  categories: training_category {
+    ... TrainingCategorySummary
+    icon
+    articles_aggregate{
+      aggregate{
+        count
+      }
+    }
+  }
+}

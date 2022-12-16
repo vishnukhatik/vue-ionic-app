@@ -1,0 +1,7 @@
+#import "./UserFragments.gql"
+
+query GetUser ($id:uuid!){
+  user: user_by_pk(id:$id){
+    ... UserDetail
+  }
+}

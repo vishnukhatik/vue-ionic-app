@@ -1,0 +1,10 @@
+#import "./TestimonyFragment.gql"
+
+query ListTestimonies ($user_id:uuid!) {
+  posts: testimony{
+    ...TestimonySummary
+    reactions(where:{user_id:{_eq:$user_id}}){
+      id
+    }
+  }
+}

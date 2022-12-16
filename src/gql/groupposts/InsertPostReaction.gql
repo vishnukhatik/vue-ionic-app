@@ -1,0 +1,13 @@
+#import "./PostFragment.gql"
+
+mutation InsertPostReaction($post_id:uuid!, $user_id:uuid!) {
+  insert_post_reaction_one(object:{
+    post_id:$post_id,
+    user_id:$user_id,
+    reaction_id:"LIKE",
+  }){
+    post {
+      ...PostSummary
+    }
+  }
+}

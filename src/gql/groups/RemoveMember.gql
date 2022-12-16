@@ -1,0 +1,9 @@
+#import "./GroupFragments.gql"
+
+mutation RemoveMember($id: uuid!) {
+  delete_group_member_by_pk(id: $id) {
+    group {
+      ...GroupDetail
+    }
+  }
+}

@@ -1,0 +1,12 @@
+#import "./TestimonyFragment.gql"
+
+mutation DeleteTestimonyReaction($post_id: uuid!, $user_id: uuid!) {
+  delete_testimony_reaction(where: {post_id: {_eq: $post_id}, user_id: {_eq: $user_id}}) {
+    returning {
+      id
+      testimony {
+        ... TestimonySummary
+      }
+    }
+  }
+}

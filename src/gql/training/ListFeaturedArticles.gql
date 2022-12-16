@@ -1,0 +1,7 @@
+#import "./TrainingFragments.gql"
+
+query ListFeaturedArticles {
+  featuredArticles: training_article(order_by: {updated_at: desc}, where: {featured: {_eq: true}}) {
+    ...TrainingArticleSummary
+  }
+}

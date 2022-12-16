@@ -1,0 +1,24 @@
+#import "./GroupFragments.gql"
+
+mutation UpdateGroup (
+  $id: uuid!,
+  $name: String!,
+  $description: String!,
+  $picture: String!,
+  $meeting_day: String!,
+  $meeting_time: String!,
+  $google_place_id: String,
+  $hide_location: Boolean,
+) {
+  update_group_by_pk(pk_columns: {id: $id}, _set: {
+    name: $name,
+    description: $description,
+    picture: $picture,
+    meeting_time: $meeting_time,
+    meeting_day: $meeting_day,
+    google_place_id: $google_place_id,
+    hide_location: $hide_location,
+  }){
+    ...GroupDetail
+  }
+}

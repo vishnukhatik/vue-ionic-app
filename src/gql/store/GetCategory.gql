@@ -1,0 +1,19 @@
+query GetCategory($id:String!) {
+  category: gx_wc_product_category(id:$id){
+    name
+    products {
+      id
+      name
+      price
+      short_description
+      categories{
+        id
+        name
+      }
+      images {
+        id
+        src
+      }
+    }
+	}
+}

@@ -1,0 +1,10 @@
+#import "./TestimonyFragment.gql"
+mutation InsertTestimony($user_id:uuid!, $message:String!, $picture:String) {
+  post: insert_testimony_one(object:{
+    author_id:$user_id,
+    message:$message,
+    picture: $picture,
+  }){
+    ...TestimonySummary
+  }
+}

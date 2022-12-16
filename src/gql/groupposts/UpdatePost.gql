@@ -1,0 +1,13 @@
+#import "./PostFragment.gql"
+
+mutation UpdatePost($id:uuid!, $message:String!, $user_id:uuid!, $picture:String){
+  post: update_post_by_pk(_set:{
+    message:$message,
+    picture: $picture,
+  },pk_columns:{
+    id:$id
+  }){
+    id
+    message
+  }
+}

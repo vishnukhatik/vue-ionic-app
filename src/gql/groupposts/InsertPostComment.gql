@@ -1,0 +1,14 @@
+#import "./PostFragment.gql"
+
+mutation InsertPostComment($post_id:uuid!, $user_id:uuid!, $message:String!) {
+  insert_post_comment_one(object:{
+    post_id:$post_id,
+    author_id:$user_id,
+    message:$message
+  }){
+    id
+    post {
+      ... PostExtended
+    }
+  }
+}
